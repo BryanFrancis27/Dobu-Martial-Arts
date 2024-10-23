@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/loginandregister.css">
+</head>
+<body>
+    
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" width="80px" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services" data-bs-target="#services">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio" data-bs-target="#portfolio">Classes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team" data-bs-target="#team">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-bs-target="#about">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-bs-target="#contact">Contact</a></li>
+                
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <section id="login">
+        <div class="form-box">
+            <div class="form-value">
+                <form id="loginForm" class="was-validated">
+                    <h2 class="login">Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" id="emailaddress_login" name="emailaddress_login" />
+                        <label for="emailaddress_login">Username</label>
+                    </div>
+    
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="password_login" name="password_login" />
+                        <label for="password_login">Password</label>
+                    </div>
+    
+                    <div class="forget">
+                        <label>
+                            <input type="checkbox" />
+                            Remember Me
+                        </label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+    
+                    <input class="login-button" type="button" value="Login" onclick="loginUser()" />
+    
+                    <div class="register">
+                        <p>
+                            Don't have an account yet? Click here to <a href="register.html">REGISTER</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+function loginUser() {
+    let email = document.getElementById("emailaddress_login").value;
+    let password = document.getElementById("password_login").value;
+
+    console.log('Login attempt with email:', email);
+    let user_records = JSON.parse(localStorage.getItem("users")) || {};
+
+    // Inside your login function
+    if (user_records[email] && user_records[email]["password"] === password) {
+        alert("Login Pass");
+
+        // Store user details in local storage
+        localStorage.setItem('name', user_records[email]["firstname"] + ' ' + user_records[email]["lastname"]);
+        localStorage.setItem('email', email);
+
+        // Redirect to the profile page
+        window.location.href = 'profile.html';
+    } else {
+        alert('Login Fail');
+    }
+}
+
+
+        </script>
+        
+        
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

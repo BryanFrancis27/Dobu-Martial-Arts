@@ -1,0 +1,237 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* login page */
+
+#login{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	min-height: 100vh;
+	width: 100%;
+	background: url('https://i.pinimg.com/564x/a1/e9/79/a1e9799cfcf4e5456819de2a7c345b10.jpg')no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.form-box{
+	position: relative;
+	width: 400px;
+	height: 450px;
+	background: transparent;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+	backdrop-filter: blur(15px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.login{
+	font-size: 2em;
+	color: #fff;
+	text-align: center;
+}
+.inputbox{
+	position: relative;
+	margin: 30px 0;
+	width: 310px;
+	border-bottom: 2px solid #fff;
+}
+.inputbox label{
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	color: #fff;
+	font-size: 1em;
+	pointer-events: none;
+	transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+	top: -5px;
+}
+.inputbox input{
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 1em;
+	padding: 0 35px 0 5px;
+	color: #fff;
+}
+.inputbox ion-icon{
+	position: absolute;
+	right: 8px;
+	color: #fff;
+	font-size: 1.2em;
+	top: 20px;
+}
+.forget{
+	margin: -15px 0 15px;
+	font-size: .9em;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+.forget label input{
+	margin-right: 3px;
+}
+.forget a{
+	color: #fff;
+	text-decoration: none;
+}
+.forget a:hover{
+	text-decoration: underline;
+}
+.login-button{
+	width: 100%;
+	height: 40px;
+	border-radius: 40px;
+	background: #fff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 600;
+}
+.register{
+	font-size: .9em;
+	color: #fff;
+	text-align: center;
+	margin: 25px 0 10px;
+}
+.register p a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 600;
+}
+.register p a:hover{
+	text-decoration: underline;
+}
+
+/* for the header */
+#mainNav {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: #212529;
+  }
+  #mainNav .navbar-toggler {
+	padding: 0.75rem;
+	font-size: 0.75rem;
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	text-transform: uppercase;
+	font-weight: 700;
+  }
+  #mainNav .navbar-brand {
+	color: #ffc800;
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-weight: 700;
+	letter-spacing: 0.0625em;
+	text-transform: uppercase;
+  }
+  #mainNav .navbar-brand img {
+	height: 1.5rem;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 0.95rem;
+	color: #fff;
+	letter-spacing: 0.0625em;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+	color: #ffc800;
+  }
+  
+  @media (min-width: 992px) {
+	#mainNav {
+	  padding-top: 1.5rem;
+	  padding-bottom: 1.5rem;
+	  border: none;
+	  background-color: transparent;
+	  transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+	}
+	#mainNav .navbar-brand {
+	  font-size: 1.5em;
+	  transition: font-size 0.3s ease-in-out;
+	}
+	#mainNav .navbar-brand img {
+	  height: 2rem;
+	  transition: height 0.3s ease-in-out;
+	}
+	#mainNav.navbar-shrink {
+	  padding-top: 1rem;
+	  padding-bottom: 1rem;
+	  background-color: #212529;
+	}
+	#mainNav.navbar-shrink .navbar-brand {
+	  font-size: 1.25em;
+	}
+	#mainNav.navbar-shrink .navbar-brand svg,
+	#mainNav.navbar-shrink .navbar-brand img {
+	  height: 1.5rem;
+	}
+	#mainNav .navbar-nav .nav-item {
+	  margin-right: 1rem;
+	}
+	#mainNav .navbar-nav .nav-item:last-child {
+	  margin-right: 0;
+	}
+  }
+
+
+
+/*for the registration */
+#registration{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('https://i.pinimg.com/564x/1b/a1/51/1ba15144398b6e33bb1823698730ac9d.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.registration{
+	font-size: 2em;
+	color: #fff;
+	text-align: center;
+}
+.register-button{
+	width: 100%;
+	height: 40px;
+	border-radius: 40px;
+	background: #fff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 600;
+}
+.form-box-registration{
+	position: relative;
+	width: 400px;
+	height: 600px;
+	background: transparent;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 20px;
+	backdrop-filter: blur(15px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+footer{
+	background: black;
+}
+#links p{
+	color: #fff;
+	text-decoration: none;
+}
+#links p:hover{
+	text-decoration: underline;
+}
