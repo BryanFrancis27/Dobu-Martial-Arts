@@ -1,7 +1,3 @@
-Here’s a well-structured README for your GitHub repository:  
-
----
-
 # Dobu Martial Arts Website Development  
 
 ## Project Overview  
